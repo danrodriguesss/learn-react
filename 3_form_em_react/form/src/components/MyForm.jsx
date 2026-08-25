@@ -1,10 +1,11 @@
 import { useState } from "react";
 import "./MyForm.css";
 
-const MyForm = () => {
+const MyForm = ({ user }) => {
+  // 6 - Controlled inputs
   // 3 - Gerenciamento de dados
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
+  const [name, setName] = useState(user ? user.name : "");
+  const [email, setEmail] = useState(user ? user.email : "");
 
   const handleName = (e) => {
     setName(e.target.value);
@@ -32,6 +33,7 @@ const MyForm = () => {
             autoComplete="name"
             placeholder="Digite o seu nome"
             onChange={handleName}
+            value={name}
           />
         </div>
 
@@ -44,6 +46,7 @@ const MyForm = () => {
             autoComplete="email"
             placeholder="Digite seu e-mail"
             onChange={(e) => setEmail(e.target.value)}
+            value={email}
           />
         </label>
 
