@@ -10,7 +10,7 @@ const url = "http://localhost:3000/products";
 function App() {
   // const [products, setProducts] = useState([]);
 
-  const { data: items } = useFetch(url);
+  const { data: items, httpConfig } = useFetch(url);
 
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
@@ -28,8 +28,6 @@ function App() {
   //   fetchProducts();
   // }, []);
 
-
-
   // 2 - add produtos
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -39,17 +37,19 @@ function App() {
       price,
     };
 
-    const res = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(product),
-    });
+    // const res = await fetch(url, {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(product),
+    // });
 
-    // 3 - carregamento dinâmico
-    const addedProduct = await res.json();
-    setProducts((prevProducts) => [...prevProducts, addedProduct]);
+    // // 3 - carregamento dinâmico
+    // const addedProduct = await res.json();
+    // setProducts((prevProducts) => [...prevProducts, addedProduct]);
+
+    httpConfig(product, "POST");
 
     setName("");
     setPrice("");
@@ -61,11 +61,12 @@ function App() {
     <div className="App">
       <h1>Lista de Produtos</h1>
       <ul>
-        {items && items.map((product) => (
-          <li key={product.id}>
-            {product.name} - R$: {product.price}
-          </li>
-        ))}
+        {items &&
+          items.map((product) => (
+            <li key={product.id}>
+              {product.name} - R$: {product.price}
+            </li>
+          ))}
       </ul>
 
       <div className="add-product">

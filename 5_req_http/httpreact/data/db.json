@@ -16,49 +16,14 @@
       "price": 29.9
     },
     {
-      "name": "Short Jeans",
-      "price": "85.95",
-      "id": "nETtaL31ekQ"
-    },
-    {
-      "name": "Camiseta branca",
-      "price": "25.63",
-      "id": "zNq4sv11szw"
-    },
-    {
-      "name": "Camiseta branca",
-      "price": "25.63",
-      "id": "lI0cZYrq4jc"
-    },
-    {
-      "name": "Caneta azul",
-      "price": "12.30",
-      "id": "lV0u1CpI_Lg"
-    },
-    {
       "name": "Abróba",
-      "price": "12.50",
-      "id": "ASt867pflB0"
+      "price": "12.97",
+      "id": "5V-EHCKvoNI"
     },
     {
       "name": "Melancia",
-      "price": "18.90",
-      "id": "c5x3aaYM2Xc"
-    },
-    {
-      "name": "Jubileu",
-      "price": "56.89",
-      "id": "nl3Ft-RmPTk"
-    },
-    {
-      "name": "Biscoito",
-      "price": "13.44",
-      "id": "x-vZNz6jc2g"
-    },
-    {
-      "name": "Chumbinho",
-      "price": "3.56",
-      "id": "jdz8fE15e_g"
+      "price": "15.67",
+      "id": "01ZIcIYGQHU"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
